@@ -72,7 +72,6 @@ $app->post('/ip/details', function(Request $req, Response $res){
         $db = $db->connect();
 
        $stmt = $db->prepare($sql);
-
        $stmt->bindParam(':ip', $ip);
        $stmt->bindParam(':city', $city);
        $stmt->bindParam(':region', $region);
